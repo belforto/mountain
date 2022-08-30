@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="UTF-8" />
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="stylesheet" href="src/style.css" />
+	<style></style>
+	<!-- <script src="src/script.js"></script> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;800&display=swap"
+		rel="stylesheet"
+	/>
+
+	<body>
+		<!-- <img src="img_la.jpg" alt="LA" style="width:100%"> -->
+
+		<div class="container">
+			<h1 class="welcomeH1">You reached the top.</h1>
+			<p class="welcomeH1">For more info visit.</p>
+			<div class="mountainContainer">
+				<div class="heightCounter">xx</div>
+
+				<div class="item liberty">
+					<img class="itemImg" src="photos/statLiberty.png" />
+					Statue of Liberty NYC
+				</div>
+				<div class="item eiffel">
+					<img class="itemImg"  src="photos/eiffel300.png" />
+					Eiffel tower Paris
+				</div>
+				<div class="item shard">
+					<img class="itemImg"  src="photos/shard310.png" />
+					Shard - The tallest building in Europe
+				</div>
+				<div class="item taipei">
+					<img class="itemImg"  src="photos/taipei430.png" />
+					Taipei 101, Taiwan
+				</div>
+				<div class="item manutd">
+					<img class="itemImg"  src="photos/manutd.png" />
+					Million of Eur Man United spent on signings in last 10 years without
+					results
+				</div>
+				<div class="item burj">
+					<img class="itemImg" src="photos/burj800.png" />
+					Burj Khalifa Tower Dubai
+				</div>
+				<div class="item bennevis">
+					<img class="itemImg" src="photos/mountainTop.png" />
+					Ben Nevis - highest Mountain in Scotland
+				</div>
+				<div class="item montblanc">
+					<img class="itemImg" src="photos/mountainTop.png" />
+					Mont Blanc - highest top of Europe
+				</div>
+				<div class="item kilimanjaro">
+					<img class="itemImg" src="photos/mountainTop.png" />
+					Kilimanjaro - highest top of Africa
+				</div>
+				<div class="item popocatepetl">
+					<img class="itemImg" src="photos/mountainTop.png" />
+					Popocatepetl - highest top of Mexico
+				</div>
+				<div class="item acouncagua">
+					<img class="itemImg" src="photos/mountainTop.png" />
+					Acouncagua - highest top of South America
+				</div>
+				<div class="item k2">
+					<img class="itemImg" src="photos/mountainTop.png" />
+					K2 -
+				</div>
+				<div class="item everest">
+					<img class="itemImg" src="photos/mountainTop.png" />
+					Mt Everest - Top of the world
+				</div>
+				<div class="item cesna">
+					<img class="itemImg" src="photos/cesna.png" />
+					Cessna maximum altitude
+				</div>
+			</div>
+
+			<svg
+				class="mountainSvg"
+				width="360"
+				height="32868"
+				viewBox="0 0 360 32768"
+				fill="url(#grad1)"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<defs>
+					<linearGradient
+						id="grad1"
+						x1="0%"
+						y1="0%"
+						x2="100%"
+						y2="0%"
+						gradientTransform="rotate(90)"
+					>
+						<stop offset="40%" stop-color="white" />
+						<stop offset="44%" stop-color="#483838" />
+						<stop offset="80%" stop-color="#42855B" />
+						<stop offset="97%" stop-color="#90B77D" />
+					</linearGradient>
+				</defs>
+				<path
+					d="M402.046 0.82218L331.339 727.63L286.843 4119.95L261.762 4099.89L250.765 7157.08L217.3 7065.14L229.388 9811.08L187.659 9760.81V13389.2L159.158 13355L181.702 17273.2L140.917 17308.7L150.459 20650.7L116.976 20633.4L134.015 22651.9L82.7743 22610.2L101.128 26047.5L21.2116 25934.9L4.1109 32763.9H402.046"
+					stroke="#914242"
+					stroke-width="10"
+				/>
+			</svg>
+			<div id="background-wrap">
+				<div class="x1">
+					<div class="cloud"></div>
+				</div>
+
+				<div class="x2">
+					<div class="cloud"></div>
+				</div>
+
+				<div class="x3">
+					<div class="cloud"></div>
+				</div>
+
+				<div class="x4">
+					<div class="cloud"></div>
+				</div>
+
+				<div class="x5">
+					<div class="cloud"></div>
+				</div>
+			</div>
+			<div class="welcome">
+				<h1 class="welcomeH1">Welcome to the mountain</h1>
+				<p class="welcomeH1">Climb to the top and find out interesting facts about heights</p>
+			</div>
+		</div>
+	</body>
+	<script>
+		 window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "auto" });
+		
+		var previousScroll = 0;
+		window.addEventListener('scroll', function () {
+			const el = document.querySelector('.heightCounter');
+			const diff= 32300 - scrollY
+			console.log('diff: ', diff);
+			if(diff>0 &&  diff<31881){
+
+				el.textContent = parseInt((diff) / 3.57) + ' M HEIGHT';
+			}
+			// if((scrollY-previousScroll)>1000){
+			// 	previousScroll=scrollY
+			// 	console.log("inside");
+			// }
+		});
+	</script>
+</html>
