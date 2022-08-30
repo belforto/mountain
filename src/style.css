@@ -332,7 +332,7 @@ top: -90px;
 }
 .everest{
   width: 128px;
-  height: 300px;
+  height: 301px;
   display: flex;
   flex-direction: column;
   grid-column-start: 4;
